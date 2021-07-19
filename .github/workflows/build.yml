@@ -28,5 +28,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
           FOLDER: docs/.vitepress/dist
-          GIT_CONFIG_NAME: vuecomponent-seed
+          GIT_CONFIG_NAME: hlzn-design-vue
           COMMIT_MESSAGE: website deploy
