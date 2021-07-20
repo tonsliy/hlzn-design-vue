@@ -40,6 +40,7 @@ h5,
 h6 {
   margin: 0;
   line-height: 1.25;
+  color: var(--c-text) !important
 }
 
 h1,
