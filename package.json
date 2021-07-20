@@ -1,6 +1,6 @@
 {
   "name": "hlzn-design-vue",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "license": "MIT",
   "scripts": {
     "dev": "vite",
@@ -24,7 +24,7 @@
   ],
   "main": "dist/lib/hlzn-design-vue.umd.js",
   "module": "dist/es/hlzn-design-vue.esm.js",
-  "typings": "dist/types/hlzn-design-vue.d.ts",
+  "typings": "dist/hlzn-design-vue.d.ts",
   "dependencies": {},
   "devDependencies": {
     "@iconify/json": "^1.1.376",
