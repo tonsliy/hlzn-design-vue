@@ -13,14 +13,14 @@ html {
 body {
   margin: 0;
   width: 100%;
-  min-width: 320px;
-  min-height: 100vh;
-  line-height: 1.4;
-  font-family: var(--font-family-base);
-  font-size: 16px;
-  font-weight: 400;
-  color: var(--c-text);
-  background-color: var(--c-bg);
+  min-width: 320px !important;
+  min-height: 100vh !important;
+  line-height: 1.4 !important;
+  font-family: var(--font-family-base) !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: var(--c-text) !important;
+  background-color: var(--c-bg) !important;
   direction: ltr;
   font-synthesis: none;
   text-rendering: optimizeLegibility;

@@ -16,8 +16,8 @@ const zhComponentDocs = componentDocs.map(item => ({
   ...item,
   link: '/zh-CN/components/' + item.link
 }))
-const REPO_BASE_URL = '/hlzn-design-vue/'
 
+const REPO_BASE_URL = '/hlzn-design-vue/'
 module.exports = {
   base: process.env.VERCEL_BUILD ? '/' : REPO_BASE_URL,
   title: 'Hlzn Design Vue',
@@ -31,7 +31,7 @@ module.exports = {
 
   lang: 'zh-CN',
   themeConfig: {
-    repo: '', // replace the repo link
+    repo: 'https://github.com/tonsliy/hlzn-design-vue',
     docsBranch: 'master',
     editLinks: true,
     editLinkText: '为此文档提供修改建议',

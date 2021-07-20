@@ -2,7 +2,7 @@ import type { App } from 'vue'
 import Button from './button/index'
 
 const components = [Button]
-const version = '1.0.14'
+const version = '0.1.2'
 
     const install = (app: App) => {
       components.forEach((component) => {

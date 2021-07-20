@@ -10,6 +10,7 @@ import { Button } from 'hlzn-lib'
 
 Vue.creatApp().use(Button.name, Button)
 ```
+
 ## demo
 
 <demo-wrapper
