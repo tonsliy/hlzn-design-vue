@@ -84,13 +84,14 @@ async function parseComponentExports() {
 
 async function writeEntry() {
   fs.writeFileSync(
-    `${CWD}/src/packages/hlzn-lib.ts`,
+    `${CWD}/src/packages/hlzn-design-vue.ts`,
     await parseComponentExports()
   )
   /**
    * 格式化
    */
-  // spawn('eslint', ['./src/packages/hlzn-lib.ts', '--fix'])
+  // TODO
+  // spawn('eslint', ['./src/packages/hlzn-design-vue.ts', '--fix'])
 }
 
 writeEntry()

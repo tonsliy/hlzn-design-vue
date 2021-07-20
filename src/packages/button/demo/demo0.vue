@@ -5,7 +5,7 @@ export default {
 }
 </script>
 <script setup lang="ts">
-import MyButton from 'hlzn-lib/button'
+import MyButton from 'hlzn-design-vue/button'
 </script>
 
 <template>

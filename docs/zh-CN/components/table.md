@@ -6,7 +6,7 @@ class: 'button-doc'
 ## use
 
 ```javascript
-import { Button } from 'hlzn-lib'
+import { Button } from 'hlzn-design-vue'
 
 Vue.creatApp().use(Button.name, Button)
 ```

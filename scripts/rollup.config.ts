@@ -14,7 +14,7 @@ const outPubOptions = {
   },
 }
 
-const input = 'src/packages/hlzn-lib.ts'
+const input = 'src/packages/hlzn-design-vue.ts'
 
 const getPlugins = () => [
   replace({
@@ -41,7 +41,7 @@ const getPlugins = () => [
   alias({
     entries: [
       {
-        find: /^(hlzn-lib\/)(.*)/,
+        find: /^(hlzn-design-vue\/)(.*)/,
         replacement: `${path.resolve(
           __dirname,
           '../src/packages'
@@ -63,7 +63,7 @@ const configs = []
 configs.push({
   input,
   output: {
-    file: `dist/es/hlzn-lib.esm.js`,
+    file: `dist/es/hlzn-design-vue.esm.js`,
     format: 'es',
     ...outPubOptions,
   },
@@ -80,9 +80,9 @@ configs.push({
 configs.push({
   input,
   output: {
-    file: `dist/lib/hlzn-lib.umd.js`,
+    file: `dist/lib/hlzn-design-vue.umd.js`,
     format: 'umd',
-    name: `hlzn-lib`,
+    name: `hlzn-design-vue`,
     ...outPubOptions,
   },
   plugins: getPlugins(),

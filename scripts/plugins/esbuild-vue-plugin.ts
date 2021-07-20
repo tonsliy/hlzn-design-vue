@@ -63,11 +63,11 @@ export default (): Plugin => {
         }
       )
       /**
-       * replace hlzn-lib
+       * replace hlzn-design-vue
        */
-      build.onResolve({ filter: /^hlzn-lib\/.*/ }, (args) => {
+      build.onResolve({ filter: /^hlzn-design-vue\/.*/ }, (args) => {
         return {
-          path: args.path.replace('hlzn-lib/', '../'),
+          path: args.path.replace('hlzn-design-vue/', '../'),
           external: true,
         }
       })

@@ -7,7 +7,7 @@ import path from 'path'
 const config: UserConfig = {
   resolve: {
     alias: {
-      'hlzn-lib/': `${path.resolve( __dirname, '../dist/es')}/`,
+      'hlzn-design-vue/': `${path.resolve( __dirname, '../dist/es')}/`,
     },
   },
   optimizeDeps: {

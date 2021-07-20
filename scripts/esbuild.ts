@@ -25,7 +25,7 @@ async function run(options?: BuildOptions) {
     loader: { '.png': 'dataurl' },
     external: [
       'vue',
-      'hlzn-lib/*',
+      'hlzn-design-vue/*',
       '@vue/*',
       '@better-scroll/*',
       'jpeg-js',
@@ -39,12 +39,12 @@ async function run(options?: BuildOptions) {
 
 async function bundle(options?: BuildOptions) {
   await build({
-    outfile: `${cwd()}/dist/es/hlzn-lib.esm.js`,
+    outfile: `${cwd()}/dist/es/hlzn-design-vue.esm.js`,
     bundle: true,
-    entryPoints: [`${cwd()}/src/packages/hlzn-lib.ts`],
+    entryPoints: [`${cwd()}/src/packages/hlzn-design-vue.ts`],
     plugins: [vue()],
     loader: { '.png': 'dataurl' },
-    external: ['vue', 'hlzn-lib/*', '@vue/*', 'ant-design-vue'],
+    external: ['vue', 'hlzn-design-vue/*', '@vue/*', 'ant-design-vue'],
     format: 'esm',
     minify: true,
     ...options,
@@ -83,23 +83,23 @@ async function combineCss() {
   // override bundle css
   await Promise.all([
     fs.promises.writeFile(
-      `${cwd()}/dist/es/hlzn-lib.esm.css`,
+      `${cwd()}/dist/es/hlzn-design-vue.esm.css`,
       content
     ),
     fs.promises.writeFile(
-      `${cwd()}/dist/lib/hlzn-lib.umd.css`,
+      `${cwd()}/dist/lib/hlzn-design-vue.umd.css`,
       content
     ),
   ])
 
-  const name = 'hlzn-lib.min.css'
+  const name = 'hlzn-design-vue.min.css'
   await Promise.all([
     fs.promises.rename(
-      `${cwd()}/dist/es/hlzn-lib.esm.css`,
+      `${cwd()}/dist/es/hlzn-design-vue.esm.css`,
       `${cwd()}/dist/es/${name}`
     ),
     fs.promises.rename(
-      `${cwd()}/dist/lib/hlzn-lib.umd.css`,
+      `${cwd()}/dist/lib/hlzn-design-vue.umd.css`,
       `${cwd()}/dist/lib/${name}`
     ),
   ])

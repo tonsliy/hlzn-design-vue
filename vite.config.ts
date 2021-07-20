@@ -35,7 +35,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      'hlzn-lib/':
+      'hlzn-design-vue/':
         process.env.NODE_ENV !== 'preview'
           ? `${path.resolve(__dirname, './src/packages')}/`
           : `${path.resolve(__dirname, './dist/es')}/`,

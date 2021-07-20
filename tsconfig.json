@@ -12,7 +12,7 @@
     "types": ["vite/client", "@types/node"],
     "declaration": true,
     "paths": {
-      "hlzn-lib/*": [
+      "hlzn-design-vue/*": [
         "./src/packages/*"
       ],
       "dist/*": [
