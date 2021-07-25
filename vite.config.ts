@@ -10,7 +10,6 @@ import path from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   css: {
-    modules: false,
     preprocessorOptions: {
       less: {
         javascriptEnabled: true,
