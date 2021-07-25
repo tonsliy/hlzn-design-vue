@@ -54,3 +54,13 @@ $ yarn add hlzn-design-vue
 | [ant-design-vue-helper](https://marketplace.visualstudio.com/items?itemName=ant-design-vue.vscode-ant-design-vue-helper) | ant-design-vue 的 vscode 扩展 |
 | [vue-cli-plugin-ant-design](https://github.com/vueComponent/vue-cli-plugin-ant-design) | 使用 vue-cli3 快速使用 ant-design-vue 组件库 |
 | [vue-dash-event](https://github.com/vueComponent/vue-dash-event) | 在 DOM 模板中，您可以使用 ant-design-vue 组件的自定义事件（camelCase） |
+
+## 参考相关技术
+
+- [esbuild-plugin-vue](https://github.com/egoist/esbuild-plugin-vue)
+- [vue-dts-gen](https://github.com/egoist/vue-dts-gen)
+- [vueuse](https://github.com/vueuse/vueuse)
+- [vitepress-for-component](https://github.com/dewfall123/vitepress-for-component)
+- [windicss](https://github.com/windicss/windicss)
+- [Element Plus](https://github.com/element-plus/element-plus)
+- [vuecomponent-seed](https://github.com/zouhangwithsweet/vuecomponent-seed)
