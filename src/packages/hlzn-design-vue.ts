@@ -3,7 +3,7 @@ import Button from './button/index'
 import SingleSelect from './singleSelect/index'
 
 const components = [Button, SingleSelect]
-const version = '0.1.6'
+const version = '0.1.7'
 
     const install = (app: App) => {
       components.forEach((component) => {

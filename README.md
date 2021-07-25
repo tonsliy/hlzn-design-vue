@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://tonsliy.github.io/hlzn-design-vue/">
-    <img width="200" src="/hlzn-design-vue/logo.png">
+    <img width="200" src="https://tonsliy.github.io/hlzn-design-vue/logo.png" />
   </a>
 </p>
 
@@ -9,8 +9,8 @@
 </h1>
 
 <div align="center">
-
 基于Ant Design Vue 二次封装的Vue3组件库
+</div>
 
 ## 特性
 
