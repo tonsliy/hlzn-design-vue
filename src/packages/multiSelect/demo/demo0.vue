@@ -4,7 +4,6 @@ export default {
   title: '基本用法',
 }
 </script>
-
 <template>
   <MultiSelect
     :select-option="statusDic"
