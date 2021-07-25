@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /logo.png
+heroImage: /hlzn-design-vue/logo.png
 actionText: 快速开始 →
 actionLink: /zh-CN/components/quick-start
 
