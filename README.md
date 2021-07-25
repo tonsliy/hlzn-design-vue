@@ -1,27 +1,56 @@
-# Vue 3 + Typescript + Vite
+<p align="center">
+  <a href="https://tonsliy.github.io/hlzn-design-vue/">
+    <img width="200" src="/hlzn-design-vue/logo.png">
+  </a>
+</p>
 
-This template should help get you started developing with Vue 3 and Typescript in Vite.
+<h1 align="center">
+  <a href="https://tonsliy.github.io/hlzn-design-vue/" target="_blank">Hlzn Design Vue</a>
+</h1>
 
-## Recommended IDE Setup
+<div align="center">
 
-[VSCode](https://code.visualstudio.com/) + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur). Make sure to enable `vetur.experimental.templateInterpolationService` in settings!
+基于Ant Design Vue 二次封装的Vue3组件库
 
-### If Using `<script setup>`
+## 特性
 
-[`<script setup>`](https://github.com/vuejs/rfcs/pull/227) is a feature that is currently in RFC stage. To get proper IDE support for the syntax, use [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) instead of Vetur (and disable Vetur).
+- 提炼自企业级中后台产品的交互语言和视觉风格。
+- 基于Vue3、Vite、TypeScript等最新技术栈开发。
+- 对日常使用频率较高的组件二次封装,满足基础工作需求。
 
-## Type Support For `.vue` Imports in TS
+## 支持环境
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can use the following:
+- 支持 Vue 3
 
-### If Using Volar
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Opera | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/electron/electron_48x48.png" alt="Electron" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Electron |
+| --- | --- | --- | --- | --- | --- |
+| Edge | last 2 versions | last 2 versions | last 2 versions | last 2 versions | last 2 versions |
 
-Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
+## 安装
 
-### If Using Vetur
+### 使用 npm 或 yarn 安装
 
-1. Install and add `@vuedx/typescript-plugin-vue` to the [plugins section](https://www.typescriptlang.org/tsconfig#plugins) in `tsconfig.json`
-2. Delete `src/shims-vue.d.ts` as it is no longer needed to provide module info to Typescript
-3. Open `src/main.ts` in VSCode
-4. Open the VSCode command palette
-5. Search and run "Select TypeScript version" -> "Use workspace version"
+```bash
+$ npm install hlzn-design-vue --save
+```
+
+```bash
+$ yarn add hlzn-design-vue
+```
+
+如果你的网络环境不佳，推荐使用 [cnpm](https://github.com/cnpm/cnpm)。
+
+## 链接
+
+- [首页](https://tonsliy.github.io/hlzn-design-vue/)
+- [Vue 官方文档](https://cn.vuejs.org/)
+- [Ant Design Vue](https://www.antdv.com/)
+
+## 生态
+
+| Project | Description |
+| --- | --- |
+| [vue-ref](https://github.com/vueComponent/vue-ref) | 您可以使用回调来获取组件的引用，类似 react |
+| [ant-design-vue-helper](https://marketplace.visualstudio.com/items?itemName=ant-design-vue.vscode-ant-design-vue-helper) | ant-design-vue 的 vscode 扩展 |
+| [vue-cli-plugin-ant-design](https://github.com/vueComponent/vue-cli-plugin-ant-design) | 使用 vue-cli3 快速使用 ant-design-vue 组件库 |
+| [vue-dash-event](https://github.com/vueComponent/vue-dash-event) | 在 DOM 模板中，您可以使用 ant-design-vue 组件的自定义事件（camelCase） |

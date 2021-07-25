@@ -1,75 +1,60 @@
+<template>
+  <header v-if="showHero" class="home-hero">
+    <figure v-if="frontmatter.heroImage" class="figure">
+      <img
+        class="image"
+        :src="frontmatter.heroImage"
+        :alt="frontmatter.heroAlt"
+      />
+    </figure>
+
+    <h1 v-if="hasHeroText" id="main-title" class="title">{{ heroText }}</h1>
+    <p v-if="hasTagline" class="description">{{ tagline }}</p>
+
+    <NavLink
+      v-if="hasAction"
+      :item="{ link: frontmatter.actionLink, text: frontmatter.actionText }"
+      class="action"
+    />
+
+    <NavLink
+      v-if="hasAltAction"
+      :item="{ link: frontmatter.altActionLink, text: frontmatter.altActionText }"
+      class="action alt"
+    />
+  </header>
+</template>
+
 <script setup lang="ts">
-import { computed, ref, onMounted } from 'vue'
+import { computed } from 'vue'
+// import { useSiteDataByRoute, useFrontmatter } from 'vitepress'
 import { useData } from 'vitepress'
 import NavLink from './NavLink.vue'
-import { mouseFollow } from '../effects/mouse-follow'
 
+// const site = useSiteDataByRoute()
+// const data = useFrontmatter()
 const { site, frontmatter } = useData()
 
 const showHero = computed(() => {
-  const {
-    heroImage,
-    heroText,
-    tagline,
-    actionLink,
-    actionText
-  } = frontmatter.value
-  return heroImage || heroText || tagline || (actionLink && actionText)
+  return (
+    frontmatter.value.heroImage ||
+    hasHeroText.value ||
+    hasTagline.value ||
+    hasAction.value
+  )
 })
 
+const hasHeroText = computed(() => frontmatter.value.heroText !== null)
 const heroText = computed(() => frontmatter.value.heroText || site.value.title)
 
-const container = ref<HTMLElement>()
-const inner = ref<HTMLElement>()
-onMounted(() => {
-  mouseFollow(container.value, inner.value)
-})
+const hasTagline = computed(() => frontmatter.value.tagline !== null)
+const tagline = computed(() => frontmatter.value.tagline || site.value.description)
+
+const hasAction = computed(() => frontmatter.value.actionLink && frontmatter.value.actionText)
+const hasAltAction = computed(
+  () => frontmatter.value.altActionLink && frontmatter.value.altActionText
+)
 </script>
-
-<template>
-  <header v-if="showHero" class="home-hero">
-    <section class="
-        container
-        mx-auto
-        flex
-        <lg:flex-row
-        <lg:justify-center
-        <md:flex-col
-        <md:items-center
-      "
-    >
-      <div ref="container" class="w-1/2 <sm:w-auto">
-        <div ref="inner" class="inner">
-          <img src="/banner.png" class="block">
-        </div>
-      </div>
-      <div class="w-1/2 flex flex-col justify-center items-start p-16 <sm:w-full <sm:items-center <sm:p-0">
-        <p v-if="heroText" class="relative font-sans text-6xl <md:text-3xl <md:text-center <md:w-full">
-          {{ heroText }}
-        </p>
-        <p v-if="frontmatter.tagline" class="text-base text-gray-500 lg:text-left">
-          {{ frontmatter.tagline }}
-        </p>
-        <div class="home-text-action <sm:w-full <sm:flex <sm:flex-col">
-          <NavLink
-            v-if="frontmatter.actionLink && frontmatter.actionText"
-            :item="{ link: frontmatter.actionLink, text: frontmatter.actionText }"
-            class="action overflow-hidden rounded-full"
-          />
-
-          <NavLink
-            v-if="frontmatter.altActionLink && frontmatter.altActionText"
-            :item="{
-              link: frontmatter.altActionLink,
-              text: frontmatter.altActionText
-            }"
-            class="action alt overflow-hidden rounded-full <md:ml-0 lg:ml-4"
-          />
-        </div>
-      </div>
-    </section>
-  </header>
-</template>
 
 <style scoped>
 .home-hero {
@@ -99,7 +84,7 @@ onMounted(() => {
   margin: 0 auto;
   width: auto;
   max-width: 100%;
-  max-height: 280px;
+  max-height: 180px;
 }
 
 .title {
@@ -139,9 +124,9 @@ onMounted(() => {
   display: inline-block;
 }
 
-/* .action.alt {
+.action.alt {
   margin-left: 1.5rem;
-} */
+}
 
 @media (min-width: 420px) {
   .action {
@@ -159,8 +144,7 @@ onMounted(() => {
   font-weight: 500;
   color: var(--c-bg);
   background-color: var(--c-brand);
-  border: 1px solid var(--c-brand);
-  border-radius: inherit;
+  border: 2px solid var(--c-brand);
   transition: background-color 0.1s ease;
 }
 
@@ -171,8 +155,8 @@ onMounted(() => {
 
 .action :deep(.item:hover) {
   text-decoration: none;
-  /* color: var(--c-bg);
-  background-color: var(--c-brand-light); */
+  color: var(--c-bg);
+  background-color: var(--c-brand-light);
 }
 
 @media (min-width: 420px) {
@@ -181,34 +165,6 @@ onMounted(() => {
     line-height: 52px;
     font-size: 1.2rem;
     font-weight: 500;
-  }
-}
-.font-sans {
-  font-family: DINAlternate-Bold;
-}
-.rounded-full :deep(.item) {
-  width: 140px;
-}
-
-.inner {
-  transition: transform 0.5s;
-}
-
-.animate-text {
-  animation: animate 2s linear infinite;
-}
-@keyframes animate {
-  0%, 100% {
-    text-shadow: -1px -1px 0 #0ff, 1px 1px 0 #f00;
-  }
-  25% {
-    text-shadow: 1px 1px 0 #0ff, -1px -1px 0 #f00;
-  }
-  50% {
-    text-shadow: 1px -1px 0 #0ff, 1px -1px 0 #f00;
-  }
-  75% {
-    text-shadow: -1px 1px 0 #0ff, -1px 1px 0 #f00;
   }
 }
 </style>

@@ -25,7 +25,7 @@ const getPlugins = () => [
   }),
   nodeResolve(),
   commonjs({
-    include: /node_modules/
+    include: /node_modules/,
   }),
   json(),
   vue({
@@ -55,7 +55,7 @@ const getPlugins = () => [
   // genCss(),
   postcss({
     extract: true,
-  })
+  }),
 ]
 
 const configs = []

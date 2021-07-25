@@ -21,7 +21,7 @@ const REPO_BASE_URL = '/hlzn-design-vue/'
 module.exports = {
   base: process.env.VERCEL_BUILD ? '/' : REPO_BASE_URL,
   title: 'Hlzn Design Vue',
-  description: 'Hlzn Design Vue doc',
+  description: '基于Ant Design Vue 二次封装的Vue3组件库',
   head: [
     ['link', { rel: 'icon', type: 'image/png', href: REPO_BASE_URL + 'favicon.ico' }],
     ['link', { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' }],

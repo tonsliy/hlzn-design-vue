@@ -65,12 +65,18 @@ export default (): Plugin => {
       /**
        * replace hlzn-design-vue
        */
-      build.onResolve({ filter: /^hlzn-design-vue\/.*/ }, (args) => {
-        return {
-          path: args.path.replace('hlzn-design-vue/', '../'),
-          external: true,
+      build.onResolve(
+        { filter: /^hlzn-design-vue\/.*/ },
+        (args) => {
+          return {
+            path: args.path.replace(
+              'hlzn-design-vue/',
+              '../'
+            ),
+            external: true,
+          }
         }
-      })
+      )
 
       build.onLoad(
         { filter: /\.vue$/, namespace: 'vue' },

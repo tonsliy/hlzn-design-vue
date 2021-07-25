@@ -29,7 +29,7 @@ async function run(options?: BuildOptions) {
       '@vue/*',
       '@better-scroll/*',
       'jpeg-js',
-      'ant-design-vue'
+      'ant-design-vue',
     ],
     format: 'esm',
     minify: false,
@@ -41,10 +41,17 @@ async function bundle(options?: BuildOptions) {
   await build({
     outfile: `${cwd()}/dist/es/hlzn-design-vue.esm.js`,
     bundle: true,
-    entryPoints: [`${cwd()}/src/packages/hlzn-design-vue.ts`],
+    entryPoints: [
+      `${cwd()}/src/packages/hlzn-design-vue.ts`,
+    ],
     plugins: [vue()],
     loader: { '.png': 'dataurl' },
-    external: ['vue', 'hlzn-design-vue/*', '@vue/*', 'ant-design-vue'],
+    external: [
+      'vue',
+      'hlzn-design-vue/*',
+      '@vue/*',
+      'ant-design-vue',
+    ],
     format: 'esm',
     minify: true,
     ...options,

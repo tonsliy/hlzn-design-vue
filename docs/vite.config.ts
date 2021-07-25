@@ -1,5 +1,7 @@
 import { UserConfig } from 'vite'
-import Components, { AntDesignVueResolver } from 'vite-plugin-components'
+import Components, {
+  AntDesignVueResolver,
+} from 'vite-plugin-components'
 import Icons, { ViteIconsResolver } from 'vite-plugin-icons'
 import WindiCSS from 'vite-plugin-windicss'
 import path from 'path'
@@ -7,7 +9,10 @@ import path from 'path'
 const config: UserConfig = {
   resolve: {
     alias: {
-      'hlzn-design-vue/': `${path.resolve( __dirname, '../dist/es')}/`,
+      'hlzn-design-vue/': `${path.resolve(
+        __dirname,
+        '../dist/es'
+      )}/`,
     },
   },
   optimizeDeps: {

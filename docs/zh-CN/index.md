@@ -1,15 +1,18 @@
 ---
 home: true
-heroImage: /banner.png
-heroAlt:
-heroText: Hlzn Design Vue
-tagline: 基于Ant Design Vue 二次封装组件库
+heroImage: /logo.png
+actionText: 快速开始 →
+actionLink: /zh-CN/components/quick-start
 
-actionText: 开始使用
-actionLink: /zh-CN/components/
+altActionText: GitHub
+altActionLink: https://github.com/tonsliy/hlzn-design-vue
 
-altActionText: 了解更多
-altActionLink: /zh-CN/
-
-footer: power by Hlzn
+features:
+  - title: 💡 最新技术栈
+    details: 基于Vue3、Vite、TypeScript等最新技术栈开发
+  - title: 🛠️ 丰富的示例
+    details: 常见的Web端插件示例实现
+  - title: 📦 组件封装
+    details: 对日常使用频率较高的组件二次封装,满足基础工作需求
+footer: MIT Licensed | Copyright © 2021-present Hlzn
 ---

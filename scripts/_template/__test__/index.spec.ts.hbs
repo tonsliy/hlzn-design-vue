@@ -1,0 +1,11 @@
+import { mount } from '@vue/test-utils'
+import {{properCase name}} from '../index.vue'
+
+describe('{{properCase name}}.vue', () => {
+  test('render', () => {
+    const wrapper = mount({{properCase name}}, {
+      props: {},
+    })
+    expect(wrapper.classes()).toContain('{{dashCase name}}')
+  })
+})
