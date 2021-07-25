@@ -7,6 +7,13 @@ import WindiCSS from 'vite-plugin-windicss'
 import path from 'path'
 
 const config: UserConfig = {
+  css: {
+    preprocessorOptions: {
+      less: {
+        javascriptEnabled: true,
+      },
+    },
+  },
   resolve: {
     alias: {
       'hlzn-design-vue/': `${path.resolve(

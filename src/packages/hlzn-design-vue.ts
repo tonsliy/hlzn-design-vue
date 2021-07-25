@@ -1,9 +1,10 @@
 import type { App } from 'vue'
 import Button from './button/index'
+import MultiSelect from './multiSelect/index'
 import SingleSelect from './singleSelect/index'
 
-const components = [Button, SingleSelect]
-const version = '0.1.7'
+const components = [Button, MultiSelect, SingleSelect]
+const version = '0.1.8'
 
     const install = (app: App) => {
       components.forEach((component) => {
@@ -11,5 +12,5 @@ const version = '0.1.7'
       })
     }
 
-  export { Button, SingleSelect }
+  export { Button, MultiSelect, SingleSelect }
 export default { version, install }

@@ -1,6 +1,6 @@
 <template>
   <div class="mylib-nav">
-    <p class="name">下拉单选组件</p>
+    <p class="name">下拉多选组件</p>
   </div>
   <div class="mylib-example select">
     <section
@@ -28,7 +28,7 @@ import { createDemoModule } from '../../utils/index'
 const demos = import.meta.globEager('./demo*.vue')
 
 export default createDemoModule(
-  'SingleSelect',
+  'MultiSelect',
   Object.entries(demos).map((demo) => demo[1].default)
 )
 </script>

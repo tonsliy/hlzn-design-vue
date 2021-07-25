@@ -2,7 +2,7 @@
 import { defineProps, shallowReactive, computed } from 'vue'
 import { useClipboard } from '@vueuse/core'
 import { useData } from 'vitepress'
-import 'ant-design-vue/dist/antd.css'
+import 'ant-design-vue/dist/antd.less'
 
 const props = defineProps({
   demos: { type: Object, required: true },

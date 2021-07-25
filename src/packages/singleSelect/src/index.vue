@@ -33,7 +33,7 @@ export default defineComponent({
   name: 'SingleSelect',
   components: {
     [Select.name]: Select,
-    [Select.Option.name]: Select.Option,
+    'a-select-option': Select.Option,
   },
   props: basicProps,
   emits: ['change'],

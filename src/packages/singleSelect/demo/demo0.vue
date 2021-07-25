@@ -1,3 +1,10 @@
+<script lang="ts">
+export default {
+  name: 'SingleSelect',
+  title: '基本用法',
+}
+</script>
+
 <template>
   <SingleSelect
     :select-option="statusDic"
