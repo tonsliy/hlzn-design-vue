@@ -14,10 +14,10 @@
       @click.prevent
     >
       <div class="selected-value">{{ selectData }}</div>
-      <DownOutlined class="select-arrow" />
+      <!-- <DownOutlined class="select-arrow" /> -->
     </a>
     <template #overlay>
-      <a-menu
+      <!-- <a-menu
         class="multi-select-menu"
         :style="{ minWidth: compWidth }"
       >
@@ -43,7 +43,7 @@
             全选
           </a-checkbox>
         </a-menu-item>
-      </a-menu>
+      </a-menu> -->
     </template>
   </a-dropdown>
 </template>
@@ -57,12 +57,12 @@ import {
   watch,
   toRef,
 } from 'vue'
-import { DownOutlined } from '@ant-design/icons-vue'
+// import { DownOutlined } from '@ant-design/icons-vue'
 import {
   Checkbox,
-  Menu,
-  Divider,
-  Dropdown,
+  // Menu,
+  // Divider,
+  // Dropdown,
 } from 'ant-design-vue'
 import { basicProps } from './props'
 import { optionModel } from './typing'
@@ -70,12 +70,12 @@ import { optionModel } from './typing'
 export default defineComponent({
   name: 'MultiSelect',
   components: {
-    DownOutlined,
+    // DownOutlined,
     [Checkbox.name]: Checkbox,
-    [Divider.name]: Divider,
-    [Dropdown.name]: Dropdown,
-    [Menu.name]: Menu,
-    'a-menu-item': Menu.Item,
+    // [Divider.name]: Divider,
+    // [Dropdown.name]: Dropdown,
+    // [Menu.name]: Menu,
+    // 'a-menu-item': Menu.Item,
   },
   props: basicProps,
   emits: ['change'],

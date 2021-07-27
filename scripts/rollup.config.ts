@@ -72,7 +72,8 @@ configs.push({
     const reg =
       /^vue/.test(id) ||
       /^@vue/.test(id) ||
-      /^ant-design-vue/.test(id)
+      /^ant-design-vue/.test(id) ||
+      /^@ant-design/.test(id)
     return reg
   },
 })
@@ -91,6 +92,7 @@ configs.push({
       /^vue/.test(id) ||
       /^@vue/.test(id) ||
       /^ant-design-vue/.test(id) ||
+      /^@ant-design/.test(id) ||
       /^jpeg-js/.test(id)
     return reg
   },
