@@ -188,14 +188,14 @@ async function main() {
   step('\nPublishing package...')
   await publishPackage(targetVersion, runIfNotDry)
 
-  step('\nPushing to GitLab...')
-  await runIfNotDry('git', ['tag', `v${targetVersion}`])
-  await runIfNotDry('git', [
-    'push',
-    'origin',
-    `refs/tags/v${targetVersion}`,
-  ])
-  await runIfNotDry('git', ['push'])
+  // step('\nPushing to GitLab...')
+  // await runIfNotDry('git', ['tag', `v${targetVersion}`])
+  // await runIfNotDry('git', [
+  //   'push',
+  //   'origin',
+  //   `refs/tags/v${targetVersion}`,
+  // ])
+  // await runIfNotDry('git', ['push'])
 
   if (isDryRun) {
     console.log(

@@ -1,9 +1,12 @@
+<!-- 组件标题框 -->
 <script lang="ts">
 export default {
   name: 'MultiSelect',
   title: '基本用法',
 }
 </script>
+
+<!-- 组件基本用法 -->
 <template>
   <MultiSelect
     :select-option="statusDic"

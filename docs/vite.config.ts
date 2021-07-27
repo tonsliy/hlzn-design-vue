@@ -18,7 +18,8 @@ const config: UserConfig = {
     alias: {
       'hlzn-design-vue/': `${path.resolve(
         __dirname,
-        '../dist/es'
+        // '../dist/es'
+        '../src/packages'
       )}/`,
     },
   },

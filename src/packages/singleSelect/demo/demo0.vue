@@ -1,3 +1,4 @@
+<!-- 组件标题框 -->
 <script lang="ts">
 export default {
   name: 'SingleSelect',
@@ -5,6 +6,7 @@ export default {
 }
 </script>
 
+<!-- 组件基本用法 -->
 <template>
   <SingleSelect
     :select-option="statusDic"
