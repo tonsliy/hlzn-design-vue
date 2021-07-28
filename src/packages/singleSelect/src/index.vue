@@ -24,10 +24,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, reactive } from 'vue'
+import { defineComponent, ref, computed } from 'vue'
 import { Select } from 'ant-design-vue'
 import { basicProps } from './props'
-import { optionModel } from './typing'
 
 export default defineComponent({
   name: 'SingleSelect',
@@ -39,24 +38,17 @@ export default defineComponent({
   emits: ['change'],
   setup(props, { emit }) {
     const selectData = ref('')
-    const optionList: Array<optionModel> = reactive(
-      props.selectOption
-    )
+    const optionList = computed(() => props.selectOption)
 
     // 选择事件，并通知父类
     const handleChange = (value: string) => {
       emit('change', value)
-    }
-    // 取消选择
-    const cancelSelect = () => {
-      selectData.value = ''
     }
 
     return {
       selectData,
       optionList,
       handleChange,
-      cancelSelect,
     }
   },
 })

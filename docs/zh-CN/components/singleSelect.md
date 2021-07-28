@@ -22,6 +22,17 @@ Vue.creatApp().use(SingleSelect)
 const demos = import.meta.globEager('../../../src/packages/singleSelect/demo/demo*.vue')
 </script>
 
+
 ## props
 
-## event
+| 属性        | 类型               | 默认值  | 说明                     |
+| ----------- | ------------------ | ------- | ------------------------ |
+| width | `String` | `120px`       | 宽度     |
+| defaultValue        | `String`          | - | 默认值 |
+| selectOption      | `Array<optionModel>`          | `[]` | 选项对象,当value为空时，表示该项为‘取消选择’     |
+
+## Events
+
+| 事件           | 回调参数                  | 说明               |
+| -------------- | ------------------------- | ------------------ |
+| change          | `(value: string)=>void`               | 选择改变事件,返回选中value       |

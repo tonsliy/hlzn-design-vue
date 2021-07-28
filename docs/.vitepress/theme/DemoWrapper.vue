@@ -82,7 +82,7 @@ const name = frontmatter.value.component
         ></div>
         <div class="
             example-content
-            flex-1 px-32 py-12
+            flex-1 px-4 py-4
             <sm:p-4
           "
         >
@@ -127,7 +127,7 @@ const name = frontmatter.value.component
 
 <style lang="stylus">
 .demo-component {
-  width: 750px;
+  width: auto;
   margin: 0 auto;
 }
 
