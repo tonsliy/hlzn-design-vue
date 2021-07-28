@@ -14,7 +14,7 @@
       @click.prevent
     >
       <div class="selected-value">{{ selectData }}</div>
-      <component :is="antIcons" />
+      <component :is="$antIcons['DownOutlined']" />
     </a>
     <template #overlay>
       <a-menu
@@ -173,9 +173,6 @@ export default defineComponent({
       indeterminate.value = false
     }
 
-    const antIcons =
-      getCurrentInstance()?.appContext.config
-        .globalProperties.$antIcons
     return {
       compWidth,
       visible,
@@ -186,7 +183,6 @@ export default defineComponent({
       onChange,
       handleMenuClick,
       onCheckAllChange,
-      antIcons: antIcons['DownOutlined'],
     }
   },
 })
