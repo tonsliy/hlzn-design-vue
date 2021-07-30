@@ -1,4 +1,5 @@
 import { UserConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
 import Components, {
   AntDesignVueResolver,
 } from 'vite-plugin-components'
@@ -32,6 +33,7 @@ const config: UserConfig = {
     },
   },
   plugins: [
+    vue(),
     Components({
       dirs: ['.vitepress/theme/components'],
       customLoaderMatcher: (id) => id.endsWith('.md'),

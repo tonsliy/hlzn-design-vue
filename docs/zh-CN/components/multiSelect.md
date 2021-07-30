@@ -1,5 +1,5 @@
 ---
-class: 'button-doc'
+class: 'multiSelect-doc'
 ---
 # MultiSelect 下拉多选
 

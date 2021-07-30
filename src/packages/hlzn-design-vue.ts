@@ -4,7 +4,7 @@ import MultiSelect from './multiSelect/index'
 import SingleSelect from './singleSelect/index'
 
 const components = [Button, MultiSelect, SingleSelect]
-const version = '0.1.21'
+const version = '0.1.23'
 
     const install = (app: App) => {
       components.forEach((component) => {

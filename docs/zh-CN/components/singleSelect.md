@@ -1,5 +1,5 @@
 ---
-class: 'button-doc'
+class: 'singleSelect-doc'
 ---
 # SingleSelect 下拉单选
 
