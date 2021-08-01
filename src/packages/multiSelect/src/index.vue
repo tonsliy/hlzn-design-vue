@@ -14,7 +14,10 @@
       @click.prevent
     >
       <div class="selected-value">{{ selectData }}</div>
-      <component :is="$antIcons['DownOutlined']" />
+      <component
+        :is="$antIcons['DownOutlined']"
+        class="select-arrow"
+      />
     </a>
     <template #overlay>
       <a-menu
@@ -51,12 +54,10 @@
 <script lang="ts">
 import {
   defineComponent,
-  PropType,
   reactive,
   ref,
   watch,
   toRef,
-  getCurrentInstance,
 } from 'vue'
 import {
   Checkbox,
@@ -208,7 +209,7 @@ export default defineComponent({
 .multi-select-selection:hover {
   .selected-value,
   .select-arrow {
-    color: #1091ff;
+    color: #1091ff !important;
   }
 }
 .multi-select-selection.ant-dropdown-open {
