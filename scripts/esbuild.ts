@@ -67,11 +67,11 @@ Promise.all([
   }),
 ])
   .then(async () => {
-    // await combineCss()
+    await combineCss()
     spinner.succeed('Done !')
   })
   .catch(() => {
-    spinner.succeed('Failed !')
+    spinner.fail('Failed !')
   })
 
 async function combineCss() {
@@ -81,9 +81,22 @@ async function combineCss() {
   }).map((dir) => dir.path + '/index.css')
 
   let content = ''
+  let comCssContent = ''
   for (const css of allCss) {
     if (fs.existsSync(css)) {
-      content += await fs.promises.readFile(css, 'utf8')
+      const _cssContent = await fs.promises.readFile(
+        css,
+        'utf8'
+      )
+      content += _cssContent
+      try {
+        comCssContent += _cssContent.replace(
+          /\[data-v-\w[\w]*\]/g,
+          ''
+        )
+      } catch (error) {
+        console.log(error)
+      }
     }
   }
 
@@ -96,6 +109,14 @@ async function combineCss() {
     fs.promises.writeFile(
       `${cwd()}/dist/lib/hlzn-design-vue.umd.css`,
       content
+    ),
+    fs.promises.writeFile(
+      `${cwd()}/dist/es/hlzn-design-vue.css`,
+      comCssContent
+    ),
+    fs.promises.writeFile(
+      `${cwd()}/dist/lib/hlzn-design-vue.css`,
+      comCssContent
     ),
   ])
 

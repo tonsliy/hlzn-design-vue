@@ -60,7 +60,7 @@ export default defineComponent({
 .select-comp {
   min-width: 100px;
   :deep .ant-select-selector {
-    border-color: transparent;
+    border-color: transparent !important;
     .ant-select-selection-item {
       color: @select-block;
     }
@@ -80,10 +80,10 @@ export default defineComponent({
   }
   // border-color: transparent;
   :deep .ant-select-selection-item {
-    color: @select-blue;
+    color: @select-blue !important;
   }
   :deep .ant-select-arrow {
-    color: @select-blue;
+    color: @select-blue !important;
   }
 }
 

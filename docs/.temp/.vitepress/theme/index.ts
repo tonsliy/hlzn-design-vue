@@ -7,7 +7,6 @@ import './styles/code.css'
 import './styles/custom-blocks.css'
 import './styles/sidebar-links.css'
 import './styles/prism.css'
-import 'hlzn-design-vue/hlzn-design-vue.css'
 
 import { Theme } from 'vitepress'
 import Layout from './Layout.vue'
